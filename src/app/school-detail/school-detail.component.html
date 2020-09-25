@@ -1,0 +1,50 @@
+<mat-toolbar color="primary">
+  <span>School Details</span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-dialog-content>
+  <table>
+    <tr>
+      <td> <b>SchoolId : </b> </td>
+      <td> {{school.schoolId }}</td>
+    </tr>
+    <tr>
+      <td> <b>Name : </b> </td>
+      <td>{{school.schoolName }}</td>
+      <td> <b>Rating : </b> </td>
+      <td>{{school.rating }}</td>
+      <td><mat-star-rating [rating]="school.rating"  [starCount]="5" [color]="starColor" ></mat-star-rating></td>
+    </tr>
+    <tr>
+      <td> <b>Address : </b> </td>
+      <td> {{school.address }} </td>
+      <td> <b>Comments : </b> </td>
+      <td>{{school.comments }}</td>
+    </tr>
+    <tr>
+      <td> <b>Board :</b></td>
+      <td> {{school.board }}</td>
+    </tr>
+    <tr>
+      <td> <b>Staff Count : </b> </td>
+      <td>{{school.staffCount }}</td>
+    </tr>
+    <tr>
+      <td> <b>Students Count : </b></td>
+      <td> {{school.studentsCount }}</td>
+    </tr>
+    <tr>
+      <td> <b>Facilities : </b> </td>
+      <td>{{school.facilities }}</td>
+    </tr>
+    <tr>
+      <td> <b>Location : </b> </td>
+      <td>{{school.location }}</td>
+    </tr>
+
+
+  </table>
+</mat-dialog-content>

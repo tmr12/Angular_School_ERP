@@ -1,0 +1,90 @@
+<!-- <mat-form-field class="filter">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search By Location" #input>
+  </mat-form-field> -->
+<div class="search-div">
+    <button mat-raised-button>
+        <mat-icon>add</mat-icon>Create
+    </button>
+    <mat-form-field class="search-form-field" floatLabel="never">
+        <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey" (click)="onSearchClear()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>
+<table mat-table [dataSource]="dataSource" matSort class="table mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="schoolId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col"> School Id. </th>
+        <td mat-cell *matCellDef="let element"> {{element.schoolId}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="schoolName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> School Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.schoolName}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="board">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Borad </th>
+        <td mat-cell *matCellDef="let element"> {{element.board}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating </th>
+        <td mat-cell *matCellDef="let element"> {{element.rating}} </td>
+    </ng-container>
+    <ng-container matColumnDef="staffCount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Staff Count </th>
+        <td mat-cell *matCellDef="let element"> {{element.staffCount}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentsCount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Stundent Count </th>
+        <td mat-cell *matCellDef="let element"> {{element.studentsCount}} </td>
+    </ng-container>
+    <ng-container matColumnDef="facilities">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Facilities </th>
+        <td mat-cell *matCellDef="let element"> {{element.facilities}} </td>
+    </ng-container>
+    <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
+        <td mat-cell *matCellDef="let element"> {{element.comments}} </td>
+    </ng-container>
+    <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Location </th>
+        <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+        <td mat-cell *matCellDef="let row">
+
+            <button mat-icon-button color="primary" (click)="onView(row)" #tooltip="matTooltip"
+                matTooltip="View">
+                <mat-icon>launch</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="onEdit(row)" #tooltip="matTooltip"
+                matTooltip="Edit">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" #tooltip="matTooltip" matTooltip="Delete">
+                <mat-icon>delete_outline</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="noData">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+            No data.{{dataSource.data.length}} -{{dataSource.filteredData.length}}
+        </mat-footer-cell>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,80 @@
+[
+    {
+        "schoolName": "BGLR Primary School",
+        "address": "Hyderabad,501510",
+        "location": "BGLR",
+        "board": "CBSC",
+        "staffCount": 94,
+        "studentsCount": 1080,
+        "facilities": "Excellent",
+        "rating": 2,
+        "comments": "Very Good School",
+        "schoolId": 2073990139,
+        "picByte": null
+    },
+    {
+        "schoolName": "DPS Hyd-4",
+        "address": "Hyderabad,501510",
+        "location": "HYD",
+        "board": "CBSC_hyd",
+        "staffCount": 60,
+        "studentsCount": 480,
+        "facilities": "Excellent",
+        "rating": 4,
+        "comments": "Good",
+        "schoolId": 398734113,
+        "picByte": null
+    },
+    {
+        "schoolName": "DPS Hyd-1",
+        "address": "Hyderabad,501510",
+        "location": "HYD",
+        "board": "CBSC_hyd",
+        "staffCount": 85,
+        "studentsCount": 400,
+        "facilities": "Excellent",
+        "rating": 1,
+        "comments": "Good",
+        "schoolId": 958805982,
+        "picByte": null
+    },
+    {
+        "schoolName": "Donbosco1",
+        "address": "Hyderabad,501510",
+        "location": "PRG",
+        "board": "CBSC",
+        "staffCount": 60,
+        "studentsCount": 60,
+        "facilities": "Good",
+        "rating": 5,
+        "comments": "Good",
+        "schoolId": 687607884,
+        "picByte": null
+    },
+    {
+        "schoolName": "Krishnaveni High School",
+        "address": "Hyderabad,501510",
+        "location": "PRG",
+        "board": "CENTRAL",
+        "staffCount": 90,
+        "studentsCount": 600,
+        "facilities": "Excellent",
+        "rating": 2,
+        "comments": "Good",
+        "schoolId": 2053067254,
+        "picByte": null
+    },
+    {
+        "schoolName": "Krishnaveni HighSchool-2",
+        "address": "Hyderabad,501510",
+        "location": "PRG",
+        "board": "CENTRAL",
+        "staffCount": 94,
+        "studentsCount": 680,
+        "facilities": "Excellent",
+        "rating": 3,
+        "comments": "Very Good School",
+        "schoolId": 1733736952,
+        "picByte": null
+    }
+]

@@ -1,0 +1,25 @@
+.mat-dialog-container {
+    padding: 0px !important;
+}
+
+.mat-dialog-title {
+    
+}
+
+table, th, td {  
+        margin-left: 20px;
+        margin-bottom: 15px;  
+  }  
+  th, td {  
+    padding: 10px;  
+  }  
+  table#alter tr:nth-child(even) {  
+    background-color: #eee;  
+  }  
+  table#alter tr:nth-child(odd) {  
+    background-color: #fff;  
+  }  
+  table#alter th {  
+    color: white;  
+    background-color: gray;  
+  }  
