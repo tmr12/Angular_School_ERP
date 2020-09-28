@@ -12,7 +12,16 @@ export class SchoolService {
 
   // private baseURL = "http://localhost:9200/schoolManagement/";
   private baseURL = 'assets/data/schoolList.json';
+  private _loggedIn: boolean;
+
   constructor(private httpClient: HttpClient) { }
+
+  public get loggedIn(): boolean {
+    return this._loggedIn;
+  }
+  public set loggedIn(value: boolean) {
+    this._loggedIn = value;
+  }
 
   form: FormGroup = new FormGroup({
     schoolId: new FormControl('', Validators.required),

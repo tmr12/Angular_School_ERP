@@ -71,11 +71,11 @@
                 matTooltip="View">
                 <mat-icon>launch</mat-icon>
             </button>
-            <button mat-icon-button color="primary" (click)="onEdit(row)" #tooltip="matTooltip"
+            <button mat-icon-button color="primary" *ngIf= "schoolService.loggedIn" (click)="onEdit(row)" #tooltip="matTooltip"
                 matTooltip="Edit">
                 <mat-icon>edit</mat-icon>
             </button>
-            <button mat-icon-button color="warn" #tooltip="matTooltip" matTooltip="Delete">
+            <button mat-icon-button color="warn" *ngIf= "schoolService.loggedIn"  #tooltip="matTooltip" matTooltip="Delete">
                 <mat-icon>delete_outline</mat-icon>
             </button>
         </td>

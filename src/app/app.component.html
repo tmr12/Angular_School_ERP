@@ -1,7 +1,21 @@
 <div class='container'>
     <mat-toolbar color="primary">
-      <span>School List</span>
+      <mat-toolbar-row>
+        <span>School List</span>
+        <span class="spacer"></span>
+        <button mat-icon-button *ngIf="!loggedIn" (click)="signInWithFB()">
+          <mat-icon>facebook</mat-icon>
+        </button>
+        <button mat-button *ngIf="loggedIn" (click)="signOut()">
+         Log out
+        </button>
+      </mat-toolbar-row>
+     
+      <!-- <button type="button"  *ngIf="loggedIn===false" mat-flat-button color="accent">Sign In With Facebook</button> -->
+      
+      
+      
     </mat-toolbar>
-    <router-outlet></router-outlet>
+    <router-outlet ></router-outlet>
     <!-- <app-school></app-school> -->
 </div>
